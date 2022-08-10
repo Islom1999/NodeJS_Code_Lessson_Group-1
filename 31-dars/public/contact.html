@@ -4,243 +4,172 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/col.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <script>
-        document.addEventListener("contextmenu", function(e){
-            e.preventDefault();
-        }, false);
-    </script>
-
+    <title>Portfolio Contact</title>
 </head>
 <body>
+    <nav class="nav-left">
+        <div class="nav-left">
+            <div class="toggle-menu">
+                Toggle menu
+                <span class="menu__bar"></span>
+                <span class="menu__bar"></span>
+                <span class="menu__bar"></span>
+            </div>
     
-<!-- header section starts  -->
-
-<header class="header">
-
-    <a href="index.html" class="logo"> <i class="fas fa-shopping-basket"></i> groco </a>
-
-    <nav class="navbar">
-        <a href="index.html">home</a>
-        <a href="shop.html">shop</a>
-        <a href="about.html">about</a>
-        <a href="review.html">review</a>
-        <a href="blog.html">blog</a>
-        <a href="contact.html">contact</a>
+            <ul>
+                <li><img src="imgs/garden41.png" alt=""></li>
+                <li><a href="index.html">Home</a></li><hr>
+                <li><a href="about_us.html">About us</a></li><hr>
+                <li><a href="portfolio.html">Portfolio</a></li><hr>
+                <li><a href="services.html" >Services</a></li><hr>
+                <li><a href="#" class="active">Contact</a></li>
+                <li><button class="btn">Buy Now</button></li>
+            </ul>
+        </div>
     </nav>
-
-    <div class="icons">
-        <div id="menu-btn" class="fas fa-bars"></div>
-        <div id="search-btn" class="fas fa-search"></div>
-        <div id="cart-btn" class="fas fa-shopping-cart"></div>
-        <div id="login-btn" class="fas fa-user"></div>
-    </div>
-
-    <form action="" class="search-form">
-        <input type="search" placeholder="search here..." id="search-box">
-        <label for="search-box" class="fas fa-search"></label>
-    </form>
-
-    <div class="shopping-cart">
-        <div class="box">
-            <i class="fas fa-times"></i>
-            <img src="image/cart-1.jpg" alt="">
-            <div class="content">
-                <h3>organic food</h3>
-                <span class="quantity">1</span>
-                <span class="multiply">x</span>
-                <span class="price">$18.99</span>
+    
+    <nav class="nav-right">
+        <div class="nav-right">
+            <li><img src="imgs/garden41.png" alt=""></li>
+            <div>
+                <div class="toggle-menu-right">
+                    Toggle menu
+                    <span class="menu__bar"></span>
+                    <span class="menu__bar"></span>
+                    <span class="menu__bar"></span>
+                </div>
+                <li><button class="btn">Buy Now</button></li>
             </div>
+            
         </div>
-        <div class="box">
-            <i class="fas fa-times"></i>
-            <img src="image/cart-2.jpg" alt="">
-            <div class="content">
-                <h3>organic food</h3>
-                <span class="quantity">1</span>
-                <span class="multiply">x</span>
-                <span class="price">$18.99</span>
+    </nav>
+    <ul class="nav-ul-right">
+        <li><button class="btn">Buy Now</button></li>
+        <li><a href="index.html">Home</a></li><hr>
+        <li><a href="about_us.html">About us</a></li><hr>
+        <li><a href="portfolio.html">Portfolio</a></li><hr>
+        <li><a href="services.html">Services</a></li><hr>
+        <li><a  class="active"  href="#">Contact</a></li>
+
+        <svg class='close-right' aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+        
+    </ul>
+
+    <div class="body-right">
+        <div class="scroll-indicator"></div>
+        <script>
+            let scrollContent = document.querySelector('.scroll-indicator');
+                window.onscroll = function(){
+                let progressHeight = (window.pageYOffset / (document.body.scrollHeight - window.innerHeight))*100;
+                scrollContent.style.height = progressHeight + '%';
+            }
+        </script>
+
+        <header class="about-header page-portfolio">
+            <div class="container">
+             <h1>Contact</h1>
             </div>
-        </div>
-        <div class="box">
-            <i class="fas fa-times"></i>
-            <img src="image/cart-3.jpg" alt="">
-            <div class="content">
-                <h3>organic food</h3>
-                <span class="quantity">1</span>
-                <span class="multiply">x</span>
-                <span class="price">$18.99</span>
+        </header>
+ 
+        <section class="section-grid page-contact">
+            <div class="grid-parent">
+                <div class="grid-item top-center">
+                    <h2>Our office</h2>
+                    <p>Level 13, 2 Elizabeth St,
+                    <br> Melbourne, Victoria 3000,
+                    <br> Australia</p>
+
+                    <div class="parent">
+                        <div><i class='bx bxs-phone'></i></div><p class="p">Call us</p><p>+61 (0) 383 766 284</p>
+                    </div>
+                    <div class="parent">
+                        <div><i class='bx bxs-phone'></i></div><p class="p">WRITE US</p><p>noreply@envato.com</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="imgs/garden4_pic4.jpg" alt="">
+                </div>
+            </div>     
+        </section>
+        <div class="clr"></div>
+
+        <section class="section-registr">
+            <div class="container">
+                <h2>Get in touch</h2>
+                <div class="parent">
+                    <div class="col-6 col-md-12">
+                        <div class="input-field">
+                            <input type="text" id="name" required />
+                            <label for="name">Your name</label>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-12">
+                        <div class="input-field">
+                            <input type="text" id="Lastname" required />
+                            <label for="Lastname">Last name</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="input-field">
+                            <input type="text" id="Subject" required />
+                            <label for="Subject">Subject</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="input-field">
+                            <label for="Subjecttext"></label>
+                            <textarea name="" id="Subjecttext" cols="30" rows="10" placeholder="Subect"></textarea>
+                        </div>
+                    </div>
+                </div>
+            <button class="btn">send a massage</button>
             </div>
-        </div>
-        <h3 class="total"> total : <span>56.97</span> </h3>
-        <a href="#" class="btn">checkout cart</a>
-    </div>
-
-    <form action="" class="login-form">
-        <h3>login form</h3>
-        <input type="email" placeholder="enter your email" class="box">
-        <input type="password" placeholder="enter your password" class="box">
-        <div class="remember">
-            <input type="checkbox" name="" id="remember-me">
-            <label for="remember-me">remember me</label>
-        </div>
-        <input type="submit" value="login now" class="btn">
-        <p>forget password? <a href="#">click here</a></p>
-        <p>don't have an account? <a href="#">create one</a></p>
-    </form>
-
-</header>
-
-<!-- header section ends -->
-
-<div class="heading">
-    <h1>contact us</h1>
-    <p> <a href="index.html">home >></a> contact </p>
-</div>
-
-<section class="contact">
-
-    <div class="icons-container">
-
-        <div class="icons">
-            <i class="fas fa-phone"></i>
-            <h3>our number</h3>
-            <p>+123-456-7890</p>
-            <p>+111-222-3333</p>
-        </div>
-
-        <div class="icons">
-            <i class="fas fa-envelope"></i>
-            <h3>our email</h3>
-            <p>shaikhanas#gmail.com</p>
-            <p>anasbhai@gmail.com</p>
-        </div>
-
-        <div class="icons">
-            <i class="fas fa-map-marker-alt"></i>
-            <h3>our address</h3>
-            <p>mumbai, india - 400104</p>
-        </div>
-
-    </div>
-
-    <div class="row">
-
-        <form action="">
-            <h3>get in touch</h3>
-            <div class="inputBox">
-                <input type="text" placeholder="enter your name" class="box">
-                <input type="email" placeholder="enter your email" class="box">
+        </section>
+    
+        <footer>
+            <div class="container">
+                <div class="parent">
+                    <div class="col-3 col-md-6 col-lg-6 col-sm-12">
+                        <img src="imgs/garden4_pic27.png" alt="">
+                        <p class="text-dark"> Level 13, 2 Elizabeth St, <br> Melbourne, Victoria 3000, <br> Australia</p>
+                    </div>
+                    <div class="col-3  col-md-6 col-lg-6 col-sm-12">
+                        <p class="text-dark">Monday — Saturday: 8AM — 4PM</p>
+                        <i class='bx bxl-twitter'></i>
+                        <i class='bx bxl-facebook' ></i>
+                        <i class='bx bxl-skype'></i>
+                    </div>
+                    <div class="col-3  col-md-6 col-lg-6 col-sm-12">
+                        <h3>Molestie tortor</h3>
+                        <p class="text-dark">Fusce ut velit laoreet, tempus arcu eu, molestie tortor.</p>
+                        <p><span style="color: #bcba62; margin-right: 10px;">→</span> Praesent pretium</p>
+                        <p><span style="color: #bcba62; margin-right: 15px;">→</span>Pellentesque</p>
+                    </div>
+                    <div class="col-3  col-md-6 col-lg-6 col-sm-12">
+                        <h3>Have a question? <br> Keep in touch</h3>
+                        <p><i class='bx bxs-phone'></i> +61 (0) 383 766 284</p>
+                        <p><i class='bx bx-envelope'></i> noreply@envato.com</p>
+                    </div>
+                </div>
+                <p class="footer-p-bottom text-dark">© 2021 Betheme by Muffin group | All Rights Reserved | Powered by WordPress <a href="#"><i class='bx bxs-chevron-left'></i></a>
+                </p>
             </div>
-            <div class="inputBox">
-                <input type="number" placeholder="enter your number" class="box">
-                <input type="text" placeholder="enter your subject" class="box">
-            </div>
-            <textarea placeholder="your message" cols="30" rows="10"></textarea>
-            <input type="submit" value="send message" class="btn">
-        </form>
-
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30153.788252261566!2d72.82321484621745!3d19.141690214227783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1633968347413!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
-
+        </footer>
+ 
+ 
     </div>
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- footer section starts  -->
-
-<section class="footer">
-
-    <div class="box-container">
-
-        <div class="box">
-            <h3>quick links</h3>
-            <a href="index.html"> <i class="fas fa-arrow-right"></i> home</a>
-            <a href="shop.html"> <i class="fas fa-arrow-right"></i> shop</a>
-            <a href="about.html"> <i class="fas fa-arrow-right"></i> about</a>
-            <a href="review.html"> <i class="fas fa-arrow-right"></i> review</a>
-            <a href="blog.html"> <i class="fas fa-arrow-right"></i> blog</a>
-            <a href="contact.html"> <i class="fas fa-arrow-right"></i> contact</a>
-        </div>
-
-        <div class="box">
-            <h3>extra links</h3>
-            <a href="#"> <i class="fas fa-arrow-right"></i> my order </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> my favorite </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> my wishlist </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> my account </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> terms or use </a>
-        </div>
-
-        <div class="box">
-            <h3>follow us</h3>
-            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
-            <a href="#"> <i class="fab fa-pinterest"></i> pinterest </a>
-        </div>
-
-        <div class="box">
-            <h3>newsletter</h3>
-            <p>subscribe for latest updates</p>
-            <form action="">
-                <input type="email" placeholder="enter your email">
-                <input type="submit" value="subscribe" class="btn">
-            </form>
-            <img src="image/payment.png" class="payment" alt="">
-        </div>
-
-    </div>
-
-</section>
-
-<section class="credit">created by mr. web designer | all rights reserved!</section>
-
-<!-- footer section ends -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- custom css file link  -->
-<script src="js/script.js"></script>
-
+ 
+    <script src="js/"></script>
+    
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/js.js"></script>
 </body>
 </html>

@@ -4,263 +4,238 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <script>
-        document.addEventListener("keypress", function(e){
-            e.preventDefault();
-        }, false);
-    </script>
-
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/col.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>I.A.Karimov Portfolio</title>
 </head>
 <body>
-    
-<!-- header section starts  -->
+    <nav class="nav-left">
+        <div class="nav-left">
 
-<header class="header">
+            <div class="toggle-menu">
+                Toggle menu
+                <span class="menu__bar"></span>
+                <span class="menu__bar"></span>
+                <span class="menu__bar"></span>
+            </div>
 
-    <a href="index.html" class="logo"> <i class="fas fa-shopping-basket"></i> groco </a>
-
-    <nav class="navbar">
-        <a href="index.html">home</a>
-        <a href="shop.html">shop</a>
-        <a href="about.html">about</a>
-        <a href="review.html">review</a>
-        <a href="blog.html">blog</a>
-        <a href="contact.html">contact</a>
+            <ul>
+                <li><img src="imgs/garden41.png" alt=""></li>
+                <li><a class="active" href="#">Home</a></li><hr>
+                <li><a href="/about">About us</a></li><hr>
+                <li><a href="/portfolio">Portfolio</a></li><hr>
+                <li><a href="/services">Services</a></li><hr>
+                <li><a href="/contact">Contact</a></li>
+                <li><button class="btn">Buy Now</button></li>
+            </ul>
+            
+        </div>
     </nav>
-
-    <div class="icons">
-        <div id="menu-btn" class="fas fa-bars"></div>
-        <div id="search-btn" class="fas fa-search"></div>
-        <div id="cart-btn" class="fas fa-shopping-cart"></div>
-        <div id="login-btn" class="fas fa-user"></div>
-    </div>
-
-    <form action="" class="search-form">
-        <input type="search" placeholder="search here..." id="search-box">
-        <label for="search-box" class="fas fa-search"></label>
-    </form>
-
-    <div class="shopping-cart">
-        <div class="box">
-            <i class="fas fa-times"></i>
-            <img src="image/cart-1.jpg" alt="">
-            <div class="content">
-                <h3>organic food</h3>
-                <span class="quantity">1</span>
-                <span class="multiply">x</span>
-                <span class="price">$18.99</span>
+    
+    <nav class="nav-right">
+        <div class="nav-right">
+            <li><img src="imgs/garden41.png" alt=""></li>
+            <div>
+                <div class="toggle-menu-right">
+                    Toggle menu
+                    <span class="menu__bar"></span>
+                    <span class="menu__bar"></span>
+                    <span class="menu__bar"></span>
+                </div>
+                <li><button class="btn">Buy Now</button></li>
             </div>
+            
         </div>
-        <div class="box">
-            <i class="fas fa-times"></i>
-            <img src="image/cart-2.jpg" alt="">
-            <div class="content">
-                <h3>organic food</h3>
-                <span class="quantity">1</span>
-                <span class="multiply">x</span>
-                <span class="price">$18.99</span>
+    </nav>
+    <ul class="nav-ul-right">
+        <li><button class="btn">Buy Now</button></li>
+        <li><a class="active" href="#">Home</a></li><hr>
+        <li><a href="about_us.html">About us</a></li><hr>
+        <li><a href="portfolio.html">Portfolio</a></li><hr>
+        <li><a href="services.html">Services</a></li><hr>
+        <li><a href="contact.html">Contact</a></li>
+
+        <svg class='close-right' aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+        
+    </ul>
+    
+    <div class="body-right">
+        <div class="scroll-indicator"></div>
+        <script>
+            let scrollContent = document.querySelector('.scroll-indicator');
+                window.onscroll = function(){
+                let progressHeight = (window.pageYOffset / (document.body.scrollHeight - window.innerHeight))*100;
+                scrollContent.style.height = progressHeight + '%';
+            }
+        </script>
+
+        
+        
+        <header class="header-bg-animate">
+            <div class="header-text-bg">
+                <div class="img-page"><div class="page-bg">01</div></div>
+                <div class="header-img-text">
+                    <h1>We are a group of garden archtects</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis placeat numquam, cupiditate voluptate ducimus velit eligendi minima impedit sit nostrum.</p>
+                    <button class="btn btn-white">view portfolio</button>
+                    <button class="btn">contact us</button>
+                </div>
+                <div class="header-bg-video">
+                    <img src="https://themes.muffingroup.com/be/garden4/wp-content/uploads/2019/05/garden4_pic2.jpg" alt=""  data-no-retina="">
+                </div>
+                
             </div>
-        </div>
-        <div class="box">
-            <i class="fas fa-times"></i>
-            <img src="image/cart-3.jpg" alt="">
-            <div class="content">
-                <h3>organic food</h3>
-                <span class="quantity">1</span>
-                <span class="multiply">x</span>
-                <span class="price">$18.99</span>
+        </header>
+
+        <section class="header-botom">
+            <div class="container">
+                <div class="text col-sm-12">
+                    <h1>We have been designing gardens since 1990</h1>
+                    <p>Sed ultrices nisl velit, eu ornare est ullamcorper a. Nunc quis nibh magna. Proin risus erat, fringilla vel purus.</p>
+                    <button class="btn">read more</button>
+                </div>
+                <img class="img1" src="imgs/garden4_pic4.jpg" alt="">
+                <br>
+                <img class="img2" src="imgs/garden4_pic3.jpg" alt="">
             </div>
-        </div>
-        <h3 class="total"> total : <span>56.97</span> </h3>
-        <a href="#" class="btn">checkout cart</a>
-    </div>
+        </section>
+        <iv class="clr"></iv>
 
-    <form action="" class="login-form">
-        <h3>login form</h3>
-        <input type="email" placeholder="enter your email" class="box">
-        <input type="password" placeholder="enter your password" class="box">
-        <div class="remember">
-            <input type="checkbox" name="" id="remember-me">
-            <label for="remember-me">remember me</label>
-        </div>
-        <input type="submit" value="login now" class="btn">
-        <p>forget password? <a href="#">click here</a></p>
-        <p>don't have an account? <a href="#">create one</a></p>
-    </form>
+        <section class="section-check-out">
+            <div class="container">
+                <div class="parent">
+                    <div class="col-5 col-sm-12">
+                        <h2>Check <br> our range of services</h2>
+                    </div>
+                    <div class="col-7 col-sm-12">
+                        <p>Curabitur sed iaculis dolor, non congue ligula. Maecenas imperdiet ante eget hendrerit posuere. Nunc urna libero, congue porta nibh a, semper feugiat sem. Sed auctor dui eleifend, scelerisque eros ut, pellentesque nibh. Nam lacinia suscipit accumsan. Donec sodales, neque vitae rutrum convallis, nulla tortor pharetra odio, in varius ante.</p>
+                        <button class="btn">read more</button>
+                    </div>
+                </div>
 
-</header>
-
-<!-- header section ends -->
-
-<section class="home">
-
-    <div class="slides-container">
-
-        <div class="slide active">
-            <div class="content">
-                <span>fresh and organic</span>
-                <h3>upto 50% off</h3>
-                <a href="#" class="btn">shop now</a>
+                <div class="parent">
+                    <div class="col-xxl-2 col-md-6 col-sm-12">
+                        <img src="imgs/garden4_pic5.png" alt="">
+                        <h3>PORTTITOR RISUS</h3>
+                    </div>
+                    <div class="col-xxl-2 col-lg-6 col-sm-12">
+                        <img src="imgs/garden4_pic6.png" alt="">
+                        <h3>ACCUMSAN CONGUE</h3>
+                    </div>
+                    <div class="col-xxl-2 col-lg-6 col-sm-12">
+                        <img src="imgs/garden4_pic8.png" alt="">
+                        <h3>MAECENAS MALESUADA ELIT LECTUS FELIS</h3>
+                    </div>
+                    <div class="col-xxl-2 col-lg-6 col-sm-12">
+                        <img src="imgs/garden4_pic7.png" alt="">
+                        <h3>LOREM IPSUM PRIMIS IN NIBH VEL RISUS</h3>
+                    </div>
+                    <div class="col-xxl-2 col-lg-6 col-sm-12">
+                        <img src="imgs/garden4_pic9.png" alt="">
+                        <h3>INTEGER ULTRICES POSUERE CUBILIA CURAE</h3>
+                    </div>
+                </div>
             </div>
-            <div class="image">
-                <img src="image/home-img-1.png" alt="">
+        </section>
+        <div class="clr"></div>
+
+        <section class="our-last-projects">
+
+            <div class="container">
+                <div class="section-pos-bottom">
+                    <div class="parent">
+                        <div class=" col-6 col-xxl-6 col-md-12 col-lg-12 bg-color-1">
+                            <h2>Curabitur sed iaculis dolor</h2>
+                            <img src="imgs/garden4_pic23.png" alt="">
+                            <button class="btn">check prices</button>
+                        </div>
+                        <div class="col-6 col-xxl-6 col-md-12 col-lg-12 bg-color-2">
+                            <h2>Quisque lorem tortor sedr</h2>
+                            <img src="imgs/garden4_pic24.png" alt="">
+                            <button class="btn">check prices</button>
+                        </div>
+                    </div>
+                </div>
+                <h1>Our last projects <button class="btn">viev potfolio</button></h1>
+
+            <div class="parent cards">
+                <div class="col-4 col-xxl-4 col-md-12 card">
+                    <div>
+                        <img src="imgs/garden4_pic17-960x720.jpg" alt="">
+                        <h3>Nullam viverra</h3>
+                    </div>
+                </div>
+                <div class="col-4 col-xxl-4 col-md-12 card">
+                    <div>
+                        <img src="imgs/garden4_pic18-960x720.jpg" alt="">
+                        <h3>Integer ultrices</h3>
+                    </div>
+                </div>
+                <div class="col-4 col-xxl-4 col-md-12 card">
+                    <div>
+                        <img src="imgs/garden4_pic19-960x720.jpg" alt="">
+                        <h3>Aliquam erat ac</h3>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="slide">
-            <div class="content">
-                <span>fresh and organic</span>
-                <h3>upto 50% off</h3>
-                <a href="#" class="btn">shop now</a>
             </div>
-            <div class="image">
-                <img src="image/home-img-2.png" alt="">
+        </section>
+        <div class="clr"></div>
+
+        <section class="section-bg">
+            <div class="container">
+                <div class="parent section-bg-pos">
+                    <div class="col-6 col-sm-12">
+                        <img src="imgs/garden4_pic14.png" alt="">
+                        <h2>We have 20 years of experience</h2>
+                    </div>
+                    <div class="col-6 col-sm-12">
+                        <p>Duis dignissim mi ut laoreet mollis. Nunc id tellus finibus, eleifend mi vel, maximus justo. Maecenas mi tortor.</p>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+        <div class="clr"></div>
 
-        <div class="slide">
-            <div class="content">
-                <span>fresh and organic</span>
-                <h3>upto 50% off</h3>
-                <a href="#" class="btn">shop now</a>
+        <footer>
+            <div class="container">
+                <div class="parent">
+                    <div class="col-3 col-md-6 col-lg-6 col-sm-12">
+                        <img src="imgs/garden4_pic27.png" alt="">
+                        <p class="text-dark"> Level 13, 2 Elizabeth St, <br> Melbourne, Victoria 3000, <br> Australia</p>
+                    </div>
+                    <div class="col-3  col-md-6 col-lg-6 col-sm-12">
+                        <p class="text-dark">Monday — Saturday: 8AM — 4PM</p>
+                        <i class='bx bxl-twitter'></i>
+                        <i class='bx bxl-facebook' ></i>
+                        <i class='bx bxl-skype'></i>
+                    </div>
+                    <div class="col-3  col-md-6 col-lg-6 col-sm-12">
+                        <h3>Molestie tortor</h3>
+                        <p class="text-dark">Fusce ut velit laoreet, tempus arcu eu, molestie tortor.</p>
+                        <p><span style="color: #bcba62; margin-right: 10px;">→</span> Praesent pretium</p>
+                        <p><span style="color: #bcba62; margin-right: 15px;">→</span>Pellentesque</p>
+                    </div>
+                    <div class="col-3  col-md-6 col-lg-6 col-sm-12">
+                        <h3>Have a question? <br> Keep in touch</h3>
+                        <p><i class='bx bxs-phone'></i> +61 (0) 383 766 284</p>
+                        <p><i class='bx bx-envelope'></i> noreply@envato.com</p>
+                    </div>
+                </div>
+                <p class="footer-p-bottom text-dark">© 2021 Betheme by Muffin group | All Rights Reserved | Powered by WordPress <a href="#"><i class='bx bxs-chevron-left'></i></a>
+                </p>
             </div>
-            <div class="image">
-                <img src="image/home-img-3.png" alt="">
-            </div>
-        </div>
+        </footer>
 
-    </div>
-
-    <div id="next-slide" class="fas fa-angle-right" onclick="next()"></div>
-    <div id="prev-slide" class="fas fa-angle-left" onclick="next()"></div>
-
-</section>
-
-<section class="banner-container">
-
-    <div class="banner">
-        <img src="image/banner-1.jpg" alt="">
-        <div class="content">
-            <span>limited sales</span>
-            <h3>upto 50% off</h3>
-            <a href="#" class="btn">shop now</a>
-        </div>
-    </div>
-
-    <div class="banner">
-        <img src="image/banner-2.jpg" alt="">
-        <div class="content">
-            <span>limited sales</span>
-            <h3>upto 50% off</h3>
-            <a href="#" class="btn">shop now</a>
-        </div>
-    </div>
-
-    <div class="banner">
-        <img src="image/banner-3.jpg" alt="">
-        <div class="content">
-            <span>limited sales</span>
-            <h3>upto 50% off</h3>
-            <a href="#" class="btn">shop now</a>
-        </div>
-    </div>
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- footer section starts  -->
-
-<section class="footer">
-
-    <div class="box-container">
-
-        <div class="box">
-            <h3>quick links</h3>
-            <a href="index.html"> <i class="fas fa-arrow-right"></i> home</a>
-            <a href="shop.html"> <i class="fas fa-arrow-right"></i> shop</a>
-            <a href="about.html"> <i class="fas fa-arrow-right"></i> about</a>
-            <a href="review.html"> <i class="fas fa-arrow-right"></i> review</a>
-            <a href="blog.html"> <i class="fas fa-arrow-right"></i> blog</a>
-            <a href="contact.html"> <i class="fas fa-arrow-right"></i> contact</a>
-        </div>
-
-        <div class="box">
-            <h3>extra links</h3>
-            <a href="#"> <i class="fas fa-arrow-right"></i> my order </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> my favorite </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> my wishlist </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> my account </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> terms or use </a>
-        </div>
-
-        <div class="box">
-            <h3>follow us</h3>
-            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
-            <a href="#"> <i class="fab fa-pinterest"></i> pinterest </a>
-        </div>
-
-        <div class="box">
-            <h3>newsletter</h3>
-            <p>subscribe for latest updates</p>
-            <form action="">
-                <input type="email" placeholder="enter your email">
-                <input type="submit" value="subscribe" class="btn">
-            </form>
-            <img src="image/payment.png" class="payment" alt="">
-        </div>
 
     </div>
 
-</section>
-
-<section class="credit">created by mr. web designer | all rights reserved!</section>
-
-<!-- footer section ends -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- custom css file link  -->
-<script src="js/script.js"></script>
-
+    <script src="js/"></script> 
+    
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/js.js"></script>
 </body>
 </html>
