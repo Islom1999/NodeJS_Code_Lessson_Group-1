@@ -1,0 +1,44 @@
+<h1 class="text-center my-5">Lug'atlar Qo'shish</h1>
+<form class="col-8 m-auto" action="/add" method="POST">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">ENG</label>
+    <input 
+        type="text" 
+        class="form-control" 
+        id="exampleInputEmail1"
+        name="eng"
+        required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">UZ</label>
+    <input 
+        type="text" 
+        class="form-control" 
+        id="exampleInputPassword1"
+        name="uz"
+        required>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<h1 class="text-center my-5">Lug'atlar - ENG-UZ</h1>
+
+<ul class="list-group list-group-horizontal col-8 m-auto bg-info">
+  <li class="list-group-item col-5 bg-info">ENG</li>
+  <li class="list-group-item col-5 bg-info">UZ</li>
+  <li class="list-group-item col-2 bg-info">O'chirish</li>
+</ul>
+
+{{#if data}}
+    {{#each data}}
+        <ul class="list-group list-group-horizontal col-8 m-auto">
+            <li class="list-group-item col-5">{{eng}}</li>
+            <li class="list-group-item col-5">{{uz}}</li>
+            <form action="/delete/{{id}}" method="POST" class="list-group-item col-2">
+                <button class="btn btn-danger w-100">X</button>
+            </form>
+        </ul>
+    {{/each}}
+    {{else}}
+    <h2>Hozircha malumot yo'q</h2>
+{{/if}}
